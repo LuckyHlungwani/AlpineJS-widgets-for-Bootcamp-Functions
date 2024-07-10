@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootcamp Functions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="greet.js" defer></script>
+    <script src="transportFee.js" defer></script>
+    <script src="totalPhoneBill.js" defer></script>
+    <script src="wordGame.js" defer></script>
+    
+    <div x-type="text"><h1 class="top">Bootcamp Functions Widgets</h1></div>
+
+    <div class="widget">
+        <!-- Greet Function -->
+        <h2>Greet Widget</h2>
+        <input type="text" id="neighborName" placeholder="Enter neighbor's name">
+        <select id="language">
+            <option value="en">English</option>
+            <option value="ts">Tsonga</option>
+            <option value="zu">Zulu</option>
+        </select>
+        <button onclick="displayGreeting()" class="message">Greet</button>
+        <p id="greeting" class="output"></p>
+    </div>
+
+    <div class="widget">
+        <!-- Transport Fee Function -->
+        <h2>Transport Fee Widget</h2>
+        <form>
+            <label><input type="radio" name="shift" value="morning" onclick="showTransportFee('morning')"> Morning</label><br>
+            <label><input type="radio" name="shift" value="afternoon" onclick="showTransportFee('afternoon')"> Afternoon</label><br>
+            <label><input type="radio" name="shift" value="night" onclick="showTransportFee('night')"> Night</label><br>
+        </form>
+        <p id="feeDisplay" class="output"></p>
+    </div>
+
+    <div class="widget">
+        <!-- Total Phone Bill Widget -->
+        <h2>Total Phone Bill Widget</h2>
+        <input type="number" id="callCount" placeholder="Enter number of calls">
+        <input type="number" id="smsCount" placeholder="Enter number of SMS">
+        <button onclick="displayTotalPhoneBill()" class="message">Calculate Total Bill</button>
+        <p id="totalBill" class="output">Total Phone Bill: R0.00</p>
+    </div>
+
+    <div class="widget">
+        <!-- Word Game Widget -->
+        <h2>Word Game Widget</h2>
+        <label for="sentenceInput">Enter a sentence:</label>
+        <input type="text" id="sentenceInput" placeholder="Enter your sentence">
+        <button onclick="processSentence()" class="message">Process Sentence</button>
+        <h3>Results:</h3>
+        <p>Longest Word: <span id="longestWord" class="output"></span></p>
+        <p>Shortest Word: <span id="shortestWord" class="output"></span></p>
+        <p>Word Lengths: <span id="wordLengths" class="output"></span></p>
+    </div>
+</body>
+
+</html>
